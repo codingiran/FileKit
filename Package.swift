@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.4
 //
 //  Package.swift
 //  FileKit
@@ -34,7 +34,8 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "FileKit",
-            targets: ["FileKit"]),
+            targets: ["FileKit"]
+        ),
     ],
     dependencies: [],
     targets: [
@@ -43,10 +44,13 @@ let package = Package(
         .target(
             name: "FileKit",
             dependencies: [],
-            path: "Sources"),
+            path: "Sources",
+            resources: [.copy("PrivacyInfo.xcprivacy")]
+        ),
         .testTarget(
             name: "FileKitTests",
             dependencies: ["FileKit"],
-            path: "Tests")
+            path: "Tests"
+        ),
     ]
 )
