@@ -45,7 +45,7 @@ let package = Package(
             name: "FileKit",
             dependencies: [],
             path: "Sources",
-            resources: [.copy("PrivacyInfo.xcprivacy")]
+            resources: [.copy("Support/PrivacyInfo.xcprivacy")]
         ),
         .testTarget(
             name: "FileKitTests",
